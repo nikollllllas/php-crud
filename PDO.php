@@ -61,7 +61,7 @@ class usePDO {
 				marca VARCHAR(50) NOT NULL,
 				validade DATE NOT NULL,
 				preco FLOAT(4) NOT NULL,
-				lote VARCHAR(2),
+				lote VARCHAR(5),
 				usuario VARCHAR(50),
 				senha VARCHAR(100)
 			)";
