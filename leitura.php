@@ -35,7 +35,7 @@
 					var newLine = ""; 
 					for (var i = response.length - 1; i >= 0; i--) {
 						//montando linhas da tabela para inclusão de dados dinamicamente 
-						newLine += "<tr><td hidden=\"true\"><p>"+response[i].id+"</p></td><td ondblclick=\"includeEvents(this)\"><p>"+response[i].nome+"</p></td><td ondblclick=\"includeEvents(this)\"><p>"+response[i].marca+"</p></td><td ondblclick=\"includeEvents(this)\"><p>"+response[i].validade+"</p></td><td ondblclick=\"includeEvents(this)\"><p>"+response[i].preco+"</p></td><td ondblclick=\"includeEvents(this)\"><p>"+response[i].lote+"</p></td><td ondblclick=\"includeEvents(this)\"><a href=\"#\" id=\"save\" onclick=\"readProduto()\"><img src=\"img/save.gif\" width=\"32px\" height=\"32px\"></a></td><td><a href=\"#\" onclick=\"deletar(this)\" id=\"delete\"><img src=\"img/delete.png\" width=\"32px\" height=\"32px\"></a></td></tr>"    					
+						newLine += "<tr><td hidden=\"true\"><p>"+response[i].id+"</p></td><td ondblclick=\"includeEvents(this)\"><p>"+response[i].nome+"</p></td><td ondblclick=\"includeEvents(this)\"><p>"+response[i].marca+"</p></td><td ondblclick=\"includeEvents(this)\"><p>"+response[i].validade+"</p></td><td ondblclick=\"includeEvents(this)\"><p>"+response[i].preco+"</p></td><td ondblclick=\"includeEvents(this)\"><p>"+response[i].lote+"</p></td><td ondblclick=\"includeEvents(this)\"><a href=\"#\" id=\"save\" onclick=\"readProduto()\"><img src=\"img/save.png\" width=\"32px\" height=\"32px\"></a></td><td><a href=\"#\" onclick=\"deletar(this)\" id=\"delete\"><img src=\"img/delete.png\" width=\"32px\" height=\"32px\"></a></td></tr>"    					
 					}
 					table += newLine;
 					document.getElementById("tabela").innerHTML = table; //incluindo a tabela na página
