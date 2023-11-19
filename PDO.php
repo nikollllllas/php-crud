@@ -58,10 +58,9 @@ class usePDO {
 			$sql = "CREATE TABLE IF NOT EXISTS pessoa (
 				id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 				nome VARCHAR(50) NOT NULL,
-				idade INTEGER(3) NOT NULL,
-				sexo VARCHAR(1) NOT NULL,
-				estado_civil VARCHAR(100),
-				endereco VARCHAR(50),
+				marca VARCHAR(50) NOT NULL,
+				preco FLOAT(4) NOT NULL,
+				lote VARCHAR(2),
 				usuario VARCHAR(50),
 				senha VARCHAR(100)
 			)";
@@ -73,6 +72,8 @@ class usePDO {
 			echo $sql . "<br>" . $e->getMessage();
 		}
 	}
+
+// ALTERADO ATÉ AQUI----------
 
 	function insert($sql){
 		try{

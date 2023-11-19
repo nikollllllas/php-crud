@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fomulário de cadastro de produtos</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function inserir(formulario){ 
+			
+			var produto = {};//cria um objeto vazio
+
+			produto.nome = document.getElementById("nome").value;
+			produto.marca = document.getElementById("marca").value;
+			produto.validade = document.getElementById("validade").value;
+			produto.preco = document.getElementById("preco").value;
+            produto.lote = document.getElementById("lote").value;
+			localStorage.setItem('produto', JSON.stringify(produto));//Grava em Json
+			formulario.reset();
+		}
+
+		function ler(){
+			var produto = JSON.parse(localStorage.getItem('produto'));
+			document.getElementById("result").innerHTML = "Nome: " + produto.nome + 
+														"<br>Marca: " + produto.marca + 
+														"<br>Validade: " + produto.validade + 
+														"<br>Preço: " + produto.preco
+                                                        "<br>Lote: " + produto.lote;
+		}
+	</script>
+</head>
+<body>
+	<h1>Cadastro de Produtos</h1>
+	<form action="#" onsubmit="event.preventDefault(); inserir(this)">
+		<label>Nome:</label><input type="text" id="nome"><br><br>
+		<label>Marca:</label><input type="text" id="marca"><br><br>
+		<label>Validade:</label><input type="text" id="validade"><br><br>
+		<label>Preço:</label><input type="text" id="preco"><br><br>
+        <label>Lote:</label><input type="text" id="lote"><br><br>
+		<br><br>
+		<input type="submit" value="Cadastrar"><br><br>
+	</form>
+	<button onclick="ler()">Ler Pessoa</button>
+	<p id="result"></p>
+</body>
+</html>
