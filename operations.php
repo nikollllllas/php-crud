@@ -8,8 +8,8 @@ $pdo->createDB();
 $pdo->createTable();
 
 switch ($q) {
-    case "readPessoas":
-    	$result = $pdo->select("SELECT * FROM pessoa");
+    case "readproduto":
+    	$result = $pdo->select("SELECT * FROM produto");
 		print(json_encode($result->fetchAll()));
         break;
     case "update":
@@ -19,7 +19,7 @@ switch ($q) {
     	$validade = $_REQUEST["validade"];
     	$preco = $_REQUEST["preco"];
 		$lote = $_REQUEST["lote"];
-    	$result = $pdo->update("UPDATE pessoa SET nome='$nome', marca='$marca', validade='$validade', preco='$preco', lote='$lote' WHERE id='$id'");
+    	$result = $pdo->update("UPDATE produto SET nome='$nome', marca='$marca', validade='$validade', preco='$preco', lote='$lote' WHERE id='$id'");
         echo "Registro id $id atualizado com sucesso";
         break;
     case "insert":
@@ -28,7 +28,7 @@ switch ($q) {
     	$validade = $_REQUEST["validade"];
     	$preco = $_REQUEST["preco"];
 		$lote = $_REQUEST["lote"];
-    	$message = $pdo->insert("INSERT INTO pessoa (nome, marca, validade, preco, lote, usuario, senha) 
+    	$message = $pdo->insert("INSERT INTO produto (nome, marca, validade, preco, lote, usuario, senha) 
     		VALUES ('$nome', $marca, '$validade', '$preco', '$lote', 'jose_vieira','".sha1(456789)."')");
     		//outros campos são ficticios somente para evitarmos de redesenhar o banco 
 
@@ -41,9 +41,10 @@ switch ($q) {
         break;
     case "delete":
     	$id = $_REQUEST["id"];
-    	$pdo->delete("DELETE FROM pessoa WHERE id='$id'");
+    	$pdo->delete("DELETE FROM produto WHERE id='$id'");
     	echo "Registro deletado com sucesso";
     	break;
+
 }
 
 ?>

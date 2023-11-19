@@ -55,11 +55,11 @@ class usePDO {
 	function createTable(){
 		try{
 			$cnx = $this->getInstance();
-			$sql = "CREATE TABLE IF NOT EXISTS pessoa (
+			$sql = "CREATE TABLE IF NOT EXISTS produto (
 				id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 				nome VARCHAR(50) NOT NULL,
 				marca VARCHAR(50) NOT NULL,
-				validade DATA NOT NULL,
+				validade DATE NOT NULL,
 				preco FLOAT(4) NOT NULL,
 				lote VARCHAR(2),
 				usuario VARCHAR(50),
