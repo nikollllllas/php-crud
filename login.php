@@ -10,15 +10,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($input_username === $username && $input_password === $password) {
         $_SESSION['logged_in'] = true;
-
-        header("Location: pagina.php");
+        header("Location: menu.php");
         exit();
     } else {
         $_SESSION['login_error'] = "Usuário ou senha inválidos.";
-        header("Location: cadastro.php");
+        header("Location: index.php");
         exit();
     }
 } else {
-    header("Location: cadastro.php");
+    header("Location: index.php");
     exit();
 }
