@@ -59,6 +59,7 @@ class usePDO {
 				id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 				nome VARCHAR(50) NOT NULL,
 				marca VARCHAR(50) NOT NULL,
+				validade DATA NOT NULL,
 				preco FLOAT(4) NOT NULL,
 				lote VARCHAR(2),
 				usuario VARCHAR(50),
