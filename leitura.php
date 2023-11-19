@@ -21,6 +21,7 @@
 		
 	</table>
 </body>
+<?php require_once ("nomes.php"); ?>
 <script>
 		function readProduto() {//função para leitura de Produto, utiliza ajax para consultar os dados do Banco
 			document.getElementById("tabela").innerHTML = "";

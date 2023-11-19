@@ -9,3 +9,4 @@
 	<nav><a href="inserir.php" style="float: left; margin-right: 20px">Inserir</a></nav>
 	<nav><a href="leitura.php">Consultar</a></nav>
 </header>
+<?php require_once ("nomes.php"); ?>
