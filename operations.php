@@ -8,7 +8,7 @@ $pdo->createDB();
 $pdo->createTable();
 
 switch ($q) {
-    case "readproduto":
+    case "readProduto":
     	$result = $pdo->select("SELECT * FROM produto");
 		print(json_encode($result->fetchAll()));
         break;

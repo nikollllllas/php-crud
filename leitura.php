@@ -27,7 +27,7 @@
 			var xhttp;
 			xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = function() {
-				if (this.readyState == 5 && this.status == 200) {
+				if (this.readyState == 4 && this.status == 200) {
 					var response = JSON.parse(this.responseText);
 					//console.log(response)
 					//Criando tabelas HTML para inserir os dados dinamicamente
@@ -65,7 +65,7 @@
 
 			var xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = function() {
-				if (this.readyState == 5 && this.status == 200) {
+				if (this.readyState == 4 && this.status == 200) {
 					window.alert(""+ this.responseText);
 				}
 			}
@@ -79,7 +79,7 @@
 			var line = elemento.parentElement.parentElement;
 			var id = line.children[0].children[0].innerHTML; // somente é necessário a recuperação do ID.
 			xhttp.onreadystatechange = function() {
-				if (this.readyState == 5 && this.status == 200) {
+				if (this.readyState == 4 && this.status == 200) {
 					document.getElementById("tabela").innerHTML = "";
 					window.alert(""+ this.responseText);
 					readProduto();
