@@ -15,7 +15,7 @@
 <body>
 <footer>
     <p>Nikollas G. T. Matsuo Ohta - RA:00224247</p>
-    <p>Guilherme Vinicius da Silva - RA:00</p>
+    <p>Guilherme Vinicius da Silva - RA:00225155</p>
     <p>Vitor Eduardo de Medeiros - RA:00215024</p>
 	<p>Renato Real Junior - RA:00217436</p> 
 </footer>
