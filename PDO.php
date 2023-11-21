@@ -81,8 +81,6 @@ class usePDO {
 		}
 	}
 
-// ALTERADO ATÉ AQUI----------
-
 	function insert($sql){
 		try{
 			$cnx = $this->getInstance();
