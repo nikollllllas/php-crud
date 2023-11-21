@@ -61,12 +61,19 @@ class usePDO {
 				marca VARCHAR(50) NOT NULL,
 				validade DATE NOT NULL,
 				preco FLOAT(4) NOT NULL,
-				lote VARCHAR(5),
+				lote VARCHAR(5)
+			)";
+
+			$cnx->exec($sql);
+
+			$sql = "CREATE TABLE IF NOT EXISTS usuarios (
+				id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 				usuario VARCHAR(50),
 				senha VARCHAR(100)
 			)";
 
 			$cnx->exec($sql);
+		
 		}
 		catch(PDOException $e)
 		{
