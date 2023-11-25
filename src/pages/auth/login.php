@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username']) && isset(
   if ($user && password_verify($password, $user['password'])) {
     $_SESSION['user_id'] = $user['id'];
     $_SESSION['username'] = $user['username'];
-    header('Location: dashboard.php');
+    header('Location: ../produtos/index.php');
     exit();
   } else {
     $_SESSION['error'] = 'Usuário ou senha incorretos';
