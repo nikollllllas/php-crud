@@ -13,7 +13,7 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Tela de Login</h4>
+                        <h4>Tela de Cadastro</h4>
                     </div>
                     <div class="card-body">
                         <?php
@@ -24,7 +24,7 @@
                         }
                         ?>
 
-                        <form action="login.php" method="POST">
+                        <form action="cadastro.php" method="POST">
                             <div class="mb-3">
                                 <label for="username" class="form-label">Usuário:</label>
                                 <input type="text" class="form-control" id="username" name="username" required>
@@ -33,8 +33,7 @@
                                 <label for="password" class="form-label">Senha:</label>
                                 <input type="password" class="form-control" id="password" name="password" required>
                             </div>
-                            <button type="submit" class="btn btn-primary">Login</button>
-                            <a class="btn btn-primary" href="telaCadastro.php" role="button">Cadastrar</a>
+                            <button type="submit" class="btn btn-primary">Cadastrar</button>
                         </form>
                     </div>
                 </div>
